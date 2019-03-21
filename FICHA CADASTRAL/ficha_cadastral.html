@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #cabecalho {
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial, Sans-Serif;
+            font-weight: bolder;
+            font: darkgrey bold 12px Arial, Helvetica;
+        }
+
+        #linhatab {
+            border: 1px solid black;
+            padding: 25px 50px 75px 100px;
+            background-color: lightblue;
+        }
+
+        input[type=text1], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=text2], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=genero], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        div {
+            border: 1px solid black;
+            padding: 25px 50px 75px 100px;
+        }
+    </style>
+<body>
+
+<p id="cabecalho">Ficha Cadastral</p>
+<p>Dados pessoais:</p>
+<div>
+    <label for="nome">Nome:</br></label>
+    <input type="text1" id="nome" name="nome">
+
+    <label for="rg">RG:</br></label>
+    <input type="text2" id="rg" name="rg">
+
+    <label for="cpf">CPF:</br></label>
+    <input type="text2" id="cpf" name="cpf">
+
+    <label for="endereco">Endereço:</br></label>
+    <input type="text1" id="endereco" name="endereco">
+
+    <label for="genero">Gênero:</br></label>
+    <select id="genero" name="genero">
+      <option value="femininoa">Feminino</option>
+      <option value="masculino">Masculino</option>
+      <option value="trans">Trans</option>
+      <option value="outros">Outros</option>
+    </select>
+
+    <label for="nascimento">Data de Nascimento:</br></label>
+    <input type="text2" id="data" name="data">
+
+    <form method="POST" action="comentario.jsp">
+        <p>Situação Civil:
+        </br>
+        <input type="radio" name:"situacao" checked:"checked" />
+        Solteira(o)
+        <input type="radio" name:"situacao" checked:"checked" />
+        Casada(o)
+        <input type="radio" name:"situacao" checked:"checked" />
+        Viúva(o)
+        </p>
+    </form>
+    </br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
